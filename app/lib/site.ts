@@ -1,0 +1,191 @@
+export const WHATSAPP =
+  "https://wa.me/254740796763";
+export const PHONE = "+254 740 796 763";
+export const PHONE_TEL = "tel:+254740796763";
+export const EMAIL = "info@kibe-digital.co.ke";
+export const SITE_URL = "https://www.kibe-digital.co.ke";
+
+export const NAV_LINKS = [
+  { label: "Services", href: "#services" },
+  { label: "Flagship", href: "#flagship" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "Live Sites", href: "#live-sites" },
+  { label: "About", href: "#about" },
+  { label: "Process", href: "#process" },
+];
+
+export const STATS = [
+  { value: "80+", label: "Projects Completed" },
+  { value: "4", label: "Core Services" },
+  { value: "100%", label: "Client Focused" },
+];
+
+export const TAGS = [
+  "Web Design",
+  "Graphic Design",
+  "Ads Management",
+  "Google Business",
+  "Brand Identity",
+  "Social Media",
+];
+
+export const SERVICES = [
+  {
+    n: "01",
+    icon: "🌐",
+    title: "Web Design & Building",
+    desc: "Modern, mobile-friendly websites designed for clarity, usability, and real business results. From landing pages to full business sites.",
+  },
+  {
+    n: "02",
+    icon: "🎨",
+    title: "Graphic Design",
+    desc: "Eye-catching logos, posters, flyers, social media visuals, and brand identity materials that make your business unforgettable.",
+  },
+  {
+    n: "03",
+    icon: "📢",
+    title: "Ads Management",
+    desc: "Strategic ad management focused on the right audience, clear creatives, and measurable results across Meta platforms.",
+  },
+  {
+    n: "04",
+    icon: "🏢",
+    title: "Google Business Suite",
+    desc: "Professional setup and management to streamline communication, improve workflow, and boost your online visibility on Google.",
+  },
+];
+
+export const APP_STATS = [
+  { value: "28+", label: "Registered Users" },
+  { value: "9", label: "Core Modules" },
+  { value: "1", label: "Teacher OS Vision" },
+];
+
+export const APP_FEATURES = [
+  {
+    tag: "Daily Flow",
+    title: "Smart Timetable + Attendance",
+  },
+  {
+    tag: "Planning Core",
+    title: "CBC Lesson Plans + Records Of Work",
+  },
+  {
+    tag: "Professional Stack",
+    title: "TPAD Tracker + Document Vault + AI",
+  },
+];
+
+export const APP_POINTS = [
+  {
+    title: "Problem It Solves",
+    desc: "Teachers juggle scattered planning, reporting, and tracking work across too many disconnected tools.",
+  },
+  {
+    title: "What Makes It Different",
+    desc: "It comes from first-hand teacher experience, so every screen is grounded in real classroom workflow.",
+  },
+  {
+    title: "CBC Native",
+    desc: "Designed specifically for Kenyan teachers working inside CBC structure and reporting reality.",
+  },
+  {
+    title: "Live Product",
+    desc: "Already deployed, installable as a PWA, and actively used instead of sitting as a concept demo.",
+  },
+  {
+    title: "Serious Build",
+    desc: "React, TypeScript, Supabase, authentication, storage, AI assistance, and production deployment.",
+  },
+];
+
+export const PORTFOLIO_WEBSITES = [
+  "Living Water Tabernacle Church",
+  "Tindinyo Falls Resort",
+  "Elite Media Creations Kenya",
+  "Edward Limo Educational Centre",
+];
+
+export const PORTFOLIO_GRAPHICS = [
+  "Tindinyo Falls — Vacation Ad",
+  "Tindinyo Falls — Nature Flyer",
+  "Tindinyo Falls — Resort Ad",
+  "Tindinyo Falls — Valentine's Dinner",
+  "Living Water Church — Ecletia Summit",
+  "Living Water Church — Kesha Service",
+  "Apostolic Equipping Summit — Kabarnet",
+  "Living Water Church — Crossover 2026",
+  "TELEC — Driver & Minibus Hiring",
+  "TELEC — Admission Open 2026",
+  "TELEC — Pre & Primary School 2026",
+  "TELEC — Mixed Day & Boarding School",
+];
+
+export const LIVE_SITES = [
+  {
+    icon: "🏫",
+    name: "Edward Limo Educational Centre",
+    url: "https://www.edwardlimoeducentre.com",
+  },
+  {
+    icon: "🌊",
+    name: "Tindinyo Falls Resort",
+    url: "https://www.tindinyofalls.com",
+  },
+  {
+    icon: "📸",
+    name: "Elite Media Creations Kenya",
+    url: "https://www.elitemediacreations.co.ke",
+  },
+  {
+    icon: "⛪",
+    name: "Living Water Tabernacle Church",
+    url: "https://www.lwtchurch.online",
+  },
+  {
+    icon: "🌿",
+    name: "Sychar Farm Homestay",
+    url: "https://www.sycharfarmhomestay.com",
+  },
+];
+
+export const SKILLS = [
+  { name: "Web Development", level: 90 },
+  { name: "Graphic Design", level: 88 },
+  { name: "Ads & Marketing", level: 82 },
+];
+
+export const PROCESS = [
+  {
+    step: "STEP 01",
+    title: "Discovery Call",
+    desc: "We talk about your goals, brand, audience, and what you need. I listen before I design.",
+  },
+  {
+    step: "STEP 02",
+    title: "Strategy & Proposal",
+    desc: "I put together a clear plan, timeline, and quote tailored exactly to your project.",
+  },
+  {
+    step: "STEP 03",
+    title: "Design & Build",
+    desc: "I craft your website or design with attention to every detail — with regular check-ins.",
+  },
+  {
+    step: "STEP 04",
+    title: "Review & Launch",
+    desc: "You review, we refine, then we launch. I make sure everything is perfect before going live.",
+  },
+  {
+    step: "STEP 05",
+    title: "Ongoing Support",
+    desc: "Need updates or management? I'm here. Long-term partnerships are welcome and valued.",
+  },
+];
+
+export const SOCIALS = [
+  { label: "Facebook", url: "https://www.facebook.com/share/1BkxiwgFYm/" },
+  { label: "Instagram", url: "https://www.instagram.com/benny_kibet" },
+  { label: "TikTok", url: "https://www.tiktok.com/@kibenny" },
+];

@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-outfit);
+  --font-display: var(--font-display);
+}
+
+@theme {
+  --color-bg: #06060a;
+  --color-surface: #0d0d14;
+  --color-raised: #14141f;
+  --color-line: #232330;
+  --color-ink: #f4f4f6;
+  --color-muted: #9b9ba8;
+  --color-accent: #6d5cff;
+  --color-accent-2: #22d3ee;
+  --color-accent-3: #34d399;
+  --color-glow: rgba(109, 92, 255, 0.45);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee-rev: marquee-rev 40s linear infinite;
+  --animate-float: float 8s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes marquee-rev {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #a5b4fc 0%, #6d5cff 45%, #22d3ee 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.005));
+  border: 1px solid var(--color-line);
+  border-radius: 1.25rem;
+  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), border-color 0.4s ease, background 0.4s ease;
+}
+.glow-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(109, 92, 255, 0.5);
+  background: linear-gradient(180deg, rgba(109,92,255,0.08), rgba(255,255,255,0.01));
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
