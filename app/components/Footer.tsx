@@ -1,29 +1,45 @@
 "use client";
 
-import { EMAIL, PHONE, PHONE_TEL, SOCIALS } from "@/app/lib/site";
+import Link from "next/link";
+import { EMAIL, PHONE, PHONE_TEL, NAV_LINKS, SOCIALS } from "@/app/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line px-6 py-14 lg:px-10">
+    <footer className="border-t-2 border-ink bg-ink px-6 py-14 text-white lg:px-10">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-          <a href="#top" className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-accent to-accent-2 font-display text-base font-bold text-white">
-              K
+          <Link href="/" className="flex items-center gap-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.png"
+              alt="Kibe-Digital"
+              className="h-10 w-10 rounded-xl border-2 border-white/80 object-cover"
+            />
+            <span className="text-lg font-bold">
+              Kibe-Digital
             </span>
-            <span className="font-display text-lg font-semibold">
-              Kibet Web &amp; Graphic Studio
-            </span>
-          </a>
+          </Link>
 
-          <div className="flex items-center gap-6 text-sm text-muted">
+          <div className="flex items-center gap-6 text-sm font-semibold text-white/70">
+            {NAV_LINKS.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="transition-colors hover:text-white"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-6 text-sm font-semibold text-white/70">
             {SOCIALS.map((s) => (
               <a
                 key={s.label}
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-accent-2"
+                className="transition-colors hover:text-orange-burst"
               >
                 {s.label}
               </a>
@@ -31,19 +47,19 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col justify-between gap-4 border-t border-line pt-8 text-sm text-muted md:flex-row">
+        <div className="mt-10 flex flex-col justify-between gap-4 border-t border-white/20 pt-8 text-sm font-medium text-white/60 md:flex-row">
           <p>
-            © {new Date().getFullYear()} Kibet Web &amp; Graphic Studio ·
+            © {new Date().getFullYear()} Kibe-Digital ·
             Eldoret, Kenya
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             <a
               href={`mailto:${EMAIL}`}
-              className="transition-colors hover:text-ink"
+              className="transition-colors hover:text-white"
             >
               {EMAIL}
             </a>
-            <a href={PHONE_TEL} className="transition-colors hover:text-ink">
+            <a href={PHONE_TEL} className="transition-colors hover:text-white">
               {PHONE}
             </a>
           </div>

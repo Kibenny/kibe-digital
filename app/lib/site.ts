@@ -6,16 +6,14 @@ export const EMAIL = "info@kibe-digital.co.ke";
 export const SITE_URL = "https://www.kibe-digital.co.ke";
 
 export const NAV_LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "Flagship", href: "#flagship" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Live Sites", href: "#live-sites" },
-  { label: "About", href: "#about" },
-  { label: "Process", href: "#process" },
+  { label: "Home", href: "/" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const STATS = [
-  { value: "80+", label: "Projects Completed" },
+  { value: "100+", label: "Projects Completed" },
   { value: "4", label: "Core Services" },
   { value: "100%", label: "Client Focused" },
 ];
@@ -57,7 +55,7 @@ export const SERVICES = [
 ];
 
 export const APP_STATS = [
-  { value: "28+", label: "Registered Users" },
+  { value: "100+", label: "Registered Users" },
   { value: "9", label: "Core Modules" },
   { value: "1", label: "Teacher OS Vision" },
 ];
@@ -139,11 +137,6 @@ export const LIVE_SITES = [
     url: "https://www.elitemediacreations.co.ke",
   },
   {
-    icon: "⛪",
-    name: "Living Water Tabernacle Church",
-    url: "https://www.lwtchurch.online",
-  },
-  {
     icon: "🌿",
     name: "Sychar Farm Homestay",
     url: "https://www.sycharfarmhomestay.com",
@@ -151,9 +144,9 @@ export const LIVE_SITES = [
 ];
 
 export const SKILLS = [
-  { name: "Web Development", level: 90 },
-  { name: "Graphic Design", level: 88 },
-  { name: "Ads & Marketing", level: 82 },
+  { name: "Web Development", years: 2 },
+  { name: "Graphic Design", years: 6 },
+  { name: "Ads & Marketing", years: 2 },
 ];
 
 export const PROCESS = [
@@ -188,4 +181,5 @@ export const SOCIALS = [
   { label: "Facebook", url: "https://www.facebook.com/share/1BkxiwgFYm/" },
   { label: "Instagram", url: "https://www.instagram.com/benny_kibet" },
   { label: "TikTok", url: "https://www.tiktok.com/@kibenny" },
+  { label: "LinkedIn", url: "https://www.linkedin.com/in/bennykibet" },
 ];
