@@ -122,6 +122,11 @@ export const PORTFOLIO_GRAPHICS = [
 
 export const LIVE_SITES = [
   {
+    icon: "🌍",
+    name: "SHED Foundation",
+    url: "https://shedfoundation.info",
+  },
+  {
     icon: "🏫",
     name: "Edward Limo Educational Centre",
     url: "https://www.edwardlimoeducentre.com",
