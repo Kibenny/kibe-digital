@@ -5,6 +5,7 @@ import { Reveal, Eyebrow, SectionTitle } from "./motion";
 import { LIVE_SITES, WHATSAPP } from "@/app/lib/site";
 
 const SITE_SHOTS: Record<string, string> = {
+  "SHED Foundation": "/portfolio/site-shed-foundation.png",
   "Edward Limo Educational Centre": "/portfolio/site-edward-limo.png",
   "Tindinyo Falls Resort": "/portfolio/site-tindinyo-falls.png",
   "Elite Media Creations Kenya": "/portfolio/site-elite-media.png",
