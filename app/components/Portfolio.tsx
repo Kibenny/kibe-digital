@@ -14,6 +14,26 @@ const SITE_SHOTS: Record<string, string> = {
 
 type GraphicItem = { title: string; src: string; span: string };
 
+const ADS_ITEMS: { title: string; src: string }[] = [
+  { title: "28-day insights — 101.7K views", src: "/portfolio/ads-01.jpg" },
+  { title: "Views up 1,034% in 28 days", src: "/portfolio/ads-02.jpg" },
+  { title: "Top content by interactions", src: "/portfolio/ads-03.jpg" },
+  { title: "Audience follows +270%", src: "/portfolio/ads-04.jpg" },
+  { title: "Audience demographics", src: "/portfolio/ads-05.jpg" },
+  { title: "Top cities — Eldoret & Nairobi", src: "/portfolio/ads-06.jpg" },
+  { title: "Top content by views", src: "/portfolio/ads-07.jpg" },
+  { title: "28-day insights detail", src: "/portfolio/ads-08.jpg" },
+  { title: "Post insights — 47K views", src: "/portfolio/ads-09.jpg" },
+  { title: "Ad results — 39.8K views", src: "/portfolio/ads-10.jpg" },
+];
+
+const ADS_STATS: { value: string; label: string }[] = [
+  { value: "101.7K", label: "Views in 28 days" },
+  { value: "+1,034%", label: "View growth" },
+  { value: "863", label: "Content interactions" },
+  { value: "122", label: "New follows" },
+];
+
 const GRAPHIC_ITEMS: GraphicItem[] = [
   { title: "Feature Poster", src: "/portfolio/graphic-01.jpg", span: "col-span-1 row-span-2" },
   { title: "Social Ad", src: "/portfolio/graphic-02.jpg", span: "col-span-1 row-span-2" },
@@ -194,9 +214,54 @@ export default function Portfolio() {
               Ad <span className="text-gradient">Campaigns</span>
             </h2>
             <p className="mt-2 text-base font-medium text-ink-soft">
-              Strategic ad creatives for Meta platforms.
+              Real Facebook Ads results for Edward Limo Educational Centre —
+              2027 admissions campaign. Click any screenshot to view it full
+              size.
             </p>
           </Reveal>
+
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            {ADS_STATS.map((s, i) => (
+              <Reveal key={s.label} delay={i * 0.05}>
+                <div className="rounded-2xl border-2 border-ink bg-white p-5 text-center shadow-[3px_3px_0_0_rgba(17,17,17,1)]">
+                  <div className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">
+                    {s.value}
+                  </div>
+                  <div className="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                    {s.label}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {ADS_ITEMS.map((item, i) => (
+              <Reveal key={item.src} delay={i * 0.04}>
+                <button
+                  onClick={() => setLightbox({ src: item.src, title: item.title })}
+                  className="group relative block h-72 w-full cursor-zoom-in overflow-hidden rounded-2xl border-2 border-ink bg-warm-100 text-left shadow-[3px_3px_0_0_rgba(17,17,17,1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[5px_5px_0_0_rgba(17,17,17,1)]"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover object-top transition-all duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute right-3 top-3 grid h-9 w-9 translate-x-1 -translate-y-1 place-items-center rounded-full border-2 border-ink bg-warm shadow-[2px_2px_0px_0px_rgba(17,17,17,1)] text-sm font-black text-ink opacity-100 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:bg-orange-burst group-hover:text-white">
+                    ⤢
+                  </span>
+                  <div className="absolute inset-x-0 bottom-0 translate-y-full bg-ink/85 p-3 backdrop-blur-sm transition-transform duration-300 group-hover:translate-y-0">
+                    <span className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-white">
+                      <span className="h-2 w-2 shrink-0 rounded-full bg-orange-burst" />
+                      {item.title}
+                    </span>
+                  </div>
+                </button>
+              </Reveal>
+            ))}
+          </div>
 
           <Reveal delay={0.05}>
             <div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl border-2 border-ink bg-white p-7 shadow-[4px_4px_0_0_rgba(17,17,17,1)] sm:flex-row sm:items-center">
@@ -206,7 +271,7 @@ export default function Portfolio() {
                 </span>
                 <div>
                   <p className="text-base font-bold">
-                    Campaign case studies are coming soon.
+                    Want results like this for your school or business?
                   </p>
                   <p className="mt-1 text-sm font-medium text-ink-soft">
                     Reach out to discuss measurable results from your Meta ads.

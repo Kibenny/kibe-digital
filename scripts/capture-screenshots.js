@@ -6,6 +6,7 @@ const outDir = path.join(__dirname, '..', 'public', 'portfolio');
 fs.mkdirSync(outDir, { recursive: true });
 
 const sites = [
+  { name: 'shed-foundation', url: 'https://shedfoundation.info' },
   { name: 'edward-limo', url: 'https://www.edwardlimoeducentre.com' },
   { name: 'tindinyo-falls', url: 'https://www.tindinyofalls.com' },
   { name: 'elite-media', url: 'https://www.elitemediacreations.co.ke' },

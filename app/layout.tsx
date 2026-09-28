@@ -11,10 +11,13 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title:
-    "Kibe-Digital | Websites & Graphics That Grow Your Business",
+    "Benny Kibet | Full Stack Developer — Kibe-Digital | Websites & Graphics That Grow Your Business",
   description:
-    "Kibe-Digital (Eldoret, Kenya) delivers modern websites, standout visual designs, and strategic ads built to convert visitors into loyal customers.",
+    "Benny Kibet, Full Stack Developer and founder of Kibe-Digital (Eldoret, Kenya). Modern websites, full-stack web apps, standout visual designs, and strategic ads built to convert visitors into loyal customers.",
   keywords: [
+    "full stack developer kenya",
+    "full stack developer eldoret",
+    "benny kibet",
     "web design kenya",
     "graphic design",
     "ads management",
@@ -23,9 +26,9 @@ export const metadata: Metadata = {
     "kibe digital",
   ],
   openGraph: {
-    title: "Kibe-Digital",
+    title: "Benny Kibet | Full Stack Developer — Kibe-Digital",
     description:
-      "Websites & graphics that grow your business — built in Eldoret, Kenya.",
+      "Full-stack websites & apps, graphics that grow your business — built in Eldoret, Kenya.",
     type: "website",
   },
 };

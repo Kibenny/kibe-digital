@@ -30,7 +30,7 @@ export default function Hero() {
           >
             <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-white px-4 py-2 text-sm font-bold shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]">
               <span className="h-2.5 w-2.5 rounded-full bg-sage" />
-              Eldoret, Kenya · Available for projects
+              Full Stack Developer · Eldoret, Kenya · Available for projects
             </span>
 
             <h1 className="mt-7 text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[0.98] tracking-tight">

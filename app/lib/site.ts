@@ -149,7 +149,7 @@ export const LIVE_SITES = [
 ];
 
 export const SKILLS = [
-  { name: "Web Development", years: 2 },
+  { name: "Full Stack Development", years: 2 },
   { name: "Graphic Design", years: 6 },
   { name: "Ads & Marketing", years: 2 },
 ];

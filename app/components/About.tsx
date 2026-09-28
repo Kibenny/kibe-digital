@@ -22,6 +22,9 @@ export default function About() {
               <SectionTitle className="mt-5">
                 Hi, I&rsquo;m <span className="text-gradient">Benny Kibet</span>
               </SectionTitle>
+              <span className="mt-4 inline-flex items-center gap-2 rounded-full border-2 border-ink bg-ink px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-white shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]">
+                Full Stack Developer
+              </span>
             </div>
           </div>
 
