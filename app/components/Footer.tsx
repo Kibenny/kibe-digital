@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { EMAIL, PHONE, PHONE_TEL, NAV_LINKS, SOCIALS } from "@/app/lib/site";
 
@@ -9,10 +10,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <Link href="/" className="flex items-center gap-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/logo.png"
               alt="Kibe-Digital"
+              width={40}
+              height={40}
+              loading="lazy"
               className="h-10 w-10 rounded-xl border-2 border-white/80 object-cover"
             />
             <span className="text-lg font-bold">

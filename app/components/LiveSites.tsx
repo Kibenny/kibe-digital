@@ -5,12 +5,11 @@ import { Reveal, Eyebrow, SectionTitle } from "./motion";
 import { LIVE_SITES } from "@/app/lib/site";
 
 const SITE_SCREENSHOTS: Record<string, string> = {
-  "SHED Foundation": "/portfolio/site-shed-foundation.png",
-  "Edward Limo Educational Centre": "/portfolio/site-edward-limo.png",
-  "Tindinyo Falls Resort": "/portfolio/site-tindinyo-falls.png",
-  "Elite Media Creations Kenya": "/portfolio/site-elite-media.png",
-  "Living Water Tabernacle Church": "/portfolio/site-living-water.png",
-  "Sychar Farm Homestay": "/portfolio/site-sychar-farm.png",
+  "SHED Foundation": "/portfolio/site-shed-foundation.jpg",
+  "Edward Limo Educational Centre": "/portfolio/site-edward-limo.jpg",
+  "Tindinyo Falls Resort": "/portfolio/site-tindinyo-falls.jpg",
+  "Elite Media Creations Kenya": "/portfolio/site-elite-media.jpg",
+  "Sychar Farm Homestay": "/portfolio/site-sychar-farm.jpg",
 };
 
 export default function LiveSites() {

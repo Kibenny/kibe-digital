@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Reveal, Eyebrow, SectionTitle } from "./motion";
 import { EMAIL, PHONE, PHONE_TEL, SKILLS, WHATSAPP } from "@/app/lib/site";
 
@@ -10,10 +11,13 @@ export default function About() {
         <Reveal>
           <div className="flex flex-col items-start gap-8 sm:flex-row sm:items-center">
             <div className="h-52 w-44 shrink-0 overflow-hidden rounded-3xl border-2 border-ink bg-warm-100 shadow-[6px_6px_0_0_rgba(17,17,17,1)]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="/kibet.png"
-                alt="Benny Kibet"
+                alt="Benny Kibet, Full Stack Developer"
+                width={440}
+                height={587}
+                loading="lazy"
+                sizes="(max-width: 640px) 176px, 176px"
                 className="h-full w-full object-cover object-top"
               />
             </div>

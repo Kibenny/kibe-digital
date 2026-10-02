@@ -1,15 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Reveal, Eyebrow, SectionTitle } from "./motion";
 import { LIVE_SITES, WHATSAPP } from "@/app/lib/site";
 
 const SITE_SHOTS: Record<string, string> = {
-  "SHED Foundation": "/portfolio/site-shed-foundation.png",
-  "Edward Limo Educational Centre": "/portfolio/site-edward-limo.png",
-  "Tindinyo Falls Resort": "/portfolio/site-tindinyo-falls.png",
-  "Elite Media Creations Kenya": "/portfolio/site-elite-media.png",
-  "Sychar Farm Homestay": "/portfolio/site-sychar-farm.png",
+  "SHED Foundation": "/portfolio/site-shed-foundation.jpg",
+  "Edward Limo Educational Centre": "/portfolio/site-edward-limo.jpg",
+  "Tindinyo Falls Resort": "/portfolio/site-tindinyo-falls.jpg",
+  "Elite Media Creations Kenya": "/portfolio/site-elite-media.jpg",
+  "Sychar Farm Homestay": "/portfolio/site-sychar-farm.jpg",
 };
 
 type GraphicItem = { title: string; src: string; span: string };
@@ -137,11 +138,13 @@ export default function Portfolio() {
                   >
                     <div className="relative h-[230px] w-full overflow-hidden bg-warm-100">
                       {shot ? (
-                        /* eslint-disable-next-line @next/next/no-img-element */
-                        <img
+                        <Image
                           src={shot}
                           alt={s.name}
-                          className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                          fill
+                          loading="lazy"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
                         />
                       ) : (
                         <div className="flex h-full items-center justify-center">
@@ -183,12 +186,13 @@ export default function Portfolio() {
                   onClick={() => setLightbox({ src: item.src, title: item.title })}
                   className={`group relative block h-full w-full cursor-zoom-in overflow-hidden rounded-2xl border-2 border-ink bg-warm-100 text-left shadow-[3px_3px_0_0_rgba(17,17,17,1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[5px_5px_0_0_rgba(17,17,17,1)] ${item.span}`}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={item.src}
                     alt={item.title}
+                    fill
                     loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
+                    className="object-cover grayscale transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0"
                   />
                   {/* magnify badge — always visible */}
                   <span className="absolute right-3 top-3 grid h-9 w-9 translate-x-1 -translate-y-1 place-items-center rounded-full border-2 border-ink bg-warm shadow-[2px_2px_0_0_rgba(17,17,17,1)] text-sm font-black text-ink opacity-100 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:bg-orange-burst group-hover:text-white">
@@ -242,12 +246,13 @@ export default function Portfolio() {
                   onClick={() => setLightbox({ src: item.src, title: item.title })}
                   className="group relative block h-72 w-full cursor-zoom-in overflow-hidden rounded-2xl border-2 border-ink bg-warm-100 text-left shadow-[3px_3px_0_0_rgba(17,17,17,1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[5px_5px_0_0_rgba(17,17,17,1)]"
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={item.src}
                     alt={item.title}
+                    fill
                     loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover object-top transition-all duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                    className="object-cover object-top transition-all duration-500 group-hover:scale-105"
                   />
                   <span className="absolute right-3 top-3 grid h-9 w-9 translate-x-1 -translate-y-1 place-items-center rounded-full border-2 border-ink bg-warm shadow-[2px_2px_0px_0px_rgba(17,17,17,1)] text-sm font-black text-ink opacity-100 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:bg-orange-burst group-hover:text-white">
                     ⤢

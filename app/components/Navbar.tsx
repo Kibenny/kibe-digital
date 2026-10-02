@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
@@ -33,10 +34,12 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 lg:px-10">
         <Link href="/" onClick={scrollTop} className="flex items-center gap-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/logo.png"
             alt="Kibe-Digital"
+            width={40}
+            height={40}
+            priority
             className="h-10 w-10 rounded-xl border-2 border-ink object-cover shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]"
           />
           <span className="text-lg font-bold tracking-tight">
