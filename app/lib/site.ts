@@ -182,6 +182,36 @@ export const PROCESS = [
   },
 ];
 
+export const TESTIMONIALS = [
+  {
+    quote:
+      "Working with Kibe-Digital on the SHED Foundation website was a great experience. Benny was responsive, easy to work with, and did a great job taking our ideas and turning them into a clean, professional website that reflects SHED’s mission and work. I’m very happy with the final result and would definitely recommend Kibe-Digital to anyone looking for thoughtful, reliable website design.",
+    name: "Timo Kawira",
+    role: "Board Member",
+    links: [{ label: "SHED Foundation", url: "https://shedfoundation.info" }],
+  },
+  {
+    quote:
+      "We have worked with Benny on both our educational centre and our resort, and the quality has been consistent every time. A school website and a resort website need completely different things — parents need clarity, guests need beauty — and he delivered both. Communication from the first call to launch was excellent.",
+    name: "Amb. Kipyego Cheluget",
+    role: "Director",
+    links: [
+      {
+        label: "Edward Limo Educational Centre",
+        url: "https://www.edwardlimoeducentre.com",
+      },
+      { label: "Tindinyo Falls Resort", url: "https://www.tindinyofalls.com" },
+    ],
+  },
+  {
+    quote:
+      "I have had Benny design posters, flyers and social media visuals for me many times over, and the quality has never once dropped. He takes a rough idea and comes back with something far better than what I had in mind. Fast, professional, and consistent every single time.",
+    name: "BSP Richard Aengwo",
+    role: "Bishop",
+    links: [],
+  },
+];
+
 export const SOCIALS = [
   { label: "Facebook", url: "https://www.facebook.com/share/1BkxiwgFYm/" },
   { label: "Instagram", url: "https://www.instagram.com/benny_kibet" },
