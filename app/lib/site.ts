@@ -13,10 +13,15 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-  { value: "100+", label: "Projects Completed" },
-  { value: "4", label: "Core Services" },
-  { value: "100%", label: "Client Focused" },
+  { value: "15+", label: "Websites Built" },
+  { value: "65+", label: "Graphics Delivered" },
+  { value: "10+", label: "Ad Campaigns" },
 ];
+
+export const HERO_FEATURES = {
+  standard: ["Mobile Optimized", "Fast Loading", "WhatsApp Integrated"],
+  onRequest: ["Business Email on Your Own Domain", "M-Pesa Ready"],
+};
 
 export const TAGS = [
   "Web Design",

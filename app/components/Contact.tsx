@@ -60,21 +60,21 @@ export default function Contact() {
 
         <div className="mx-auto mt-14 grid max-w-lg grid-cols-3 gap-4 border-t-2 border-ink pt-8">
           <div>
-            <div className="text-3xl font-bold">100+</div>
-            <div className="mt-1 text-xs font-medium text-muted-foreground">
-              Projects Done
-            </div>
-          </div>
-          <div>
             <div className="text-3xl font-bold">24h</div>
             <div className="mt-1 text-xs font-medium text-muted-foreground">
               Response Time
             </div>
           </div>
           <div>
-            <div className="text-3xl font-bold">100%</div>
+            <div className="text-3xl font-bold">Free</div>
             <div className="mt-1 text-xs font-medium text-muted-foreground">
-              Client Focused
+              Consultation
+            </div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold">Local</div>
+            <div className="mt-1 text-xs font-medium text-muted-foreground">
+              Eldoret, Kenya
             </div>
           </div>
         </div>

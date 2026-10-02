@@ -1,10 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "motion/react";
-import { STATS, WHATSAPP } from "@/app/lib/site";
+import { STATS, HERO_FEATURES, WHATSAPP } from "@/app/lib/site";
 import Typewriter from "./Typewriter";
+
+function CheckIcon() {
+  return (
+    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-lg border-2 border-ink bg-sage/20">
+      <svg
+        aria-hidden
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={3.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-3.5 w-3.5"
+      >
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+    </span>
+  );
+}
 
 export default function Hero() {
   return (
@@ -72,41 +90,47 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="relative hidden lg:block"
+            className="relative"
           >
-            <div className="rounded-3xl border-2 border-ink bg-white p-8 shadow-[8px_8px_0_0_rgba(17,17,17,1)]">
-              <div className="flex items-center justify-between border-b-2 border-ink pb-4">
-                <div className="flex items-center gap-2">
-                  <span className="h-3 w-3 rounded-full border border-ink bg-orange-burst" />
-                  <span className="h-3 w-3 rounded-full border border-ink bg-butter" />
-                  <span className="h-3 w-3 rounded-full border border-ink bg-sage" />
-                </div>
-                <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                  kibe-digital.co.ke
-                </span>
+            <div className="rounded-3xl border-2 border-ink bg-white p-5 shadow-[8px_8px_0_0_rgba(17,17,17,1)] sm:p-8">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                Site Features
+              </span>
+
+              <div className="mt-6">
+                <p className="text-[11px] font-bold uppercase tracking-wider text-orange-burst">
+                  Standard in every build
+                </p>
+                <ul className="mt-2 divide-y-2 divide-ink border-y-2 border-ink">
+                  {HERO_FEATURES.standard.map((f) => (
+                    <li key={f} className="flex items-center gap-3 py-2.5">
+                      <CheckIcon />
+                      <span className="text-sm font-bold sm:text-base">{f}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <div className="mt-6 space-y-4">
-                {[
-                  { label: "Big Idea", w: "w-full", c: "bg-warm-100" },
-                  { label: "Smart Build", w: "w-11/12", c: "bg-sage/20" },
-                  { label: "Brand Power", w: "w-4/5", c: "bg-orange-burst/10" },
-                ].map((row) => (
-                  <div key={row.label} className="space-y-1.5">
-                    <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                      {row.label}
-                    </div>
-                    <div className={`h-3 rounded-full border border-ink ${row.w} ${row.c}`} />
-                  </div>
-                ))}
+              <div className="mt-6">
+                <p className="text-[11px] font-bold uppercase tracking-wider text-sage">
+                  Available on request
+                </p>
+                <ul className="mt-2 divide-y-2 divide-ink border-y-2 border-ink">
+                  {HERO_FEATURES.onRequest.map((f) => (
+                    <li key={f} className="flex items-center gap-3 py-2.5">
+                      <CheckIcon />
+                      <span className="text-sm font-bold sm:text-base">{f}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <div className="mt-6 flex items-center justify-between rounded-2xl border-2 border-ink bg-butter/20 px-4 py-3">
-                <span className="text-sm font-bold">Conversion Rate</span>
-                <span className="rounded-full border-2 border-ink bg-sage px-3 py-1 text-sm font-bold text-white">
-                  UP ↑
-                </span>
-              </div>
+              <Link
+                href="/portfolio"
+                className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-ink bg-warm-50 px-5 py-2.5 text-sm font-bold shadow-[3px_3px_0px_0px_rgba(17,17,17,1)] transition-all hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none"
+              >
+                See the work ↗
+              </Link>
             </div>
           </motion.div>
         </div>
